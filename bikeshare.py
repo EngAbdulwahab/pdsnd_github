@@ -2,6 +2,15 @@ import time
 import pandas as pd
 import numpy as np
 
+
+# Code Project Explain:
+# this project depend on csv file data about three cities in america.
+# the code contain seven functions frist one to filter the data users need then the second
+# function will load it.
+# the others four function are to do some descriptive statistics on the data.
+# and the final one is main function.
+
+
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york': 'new_york_city.csv',
               'washington': 'washington.csv' }
