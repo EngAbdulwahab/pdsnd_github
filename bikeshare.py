@@ -2,6 +2,15 @@ import time
 import pandas as pd
 import numpy as np
 
+
+# Code Project Explain:
+# this project depend on csv file data about three cities in america.
+# the code contain seven functions frist one to filter the data users need then the second
+# function will load it.
+# the others four function are to do some descriptive statistics on the data.
+# and the final one is main function.
+
+
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -18,8 +27,6 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     print("Which city you want to show\nPlease choose on of the following: 'chicago' , 'new york' or 'washington'?")
 
-    # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-
     while True:
         city = input()
         city = city.lower()
@@ -30,8 +37,6 @@ def get_filters():
             print("Which month you want to show? please write the month or write all if you want")
             break
 
-
-    # TO DO: get user input for month (all, january, february, ... , june)
     while True:
         month = input()
         month = month.lower()
@@ -43,8 +48,6 @@ def get_filters():
             break
 
 
-
-    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
         day = input()
         day = day.lower()
@@ -92,24 +95,15 @@ def time_stats(df):
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
-
-    # TO DO: display the most common month
     common_month = df['month'].mode()[0]
     print('the most common month is ' , common_month )
 
 
-
-    # TO DO: display the most common day of week
     common_day = df['day_of_week'].mode()[0]
     print('the most common day is ' , common_day )
 
-
-    # TO DO: display the most common start hour
-
     common_hour = df['hour'].mode()[0]
     print('the most common hour is ' , common_hour )
-
-
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -121,14 +115,10 @@ def station_stats(df):
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
 
-    # TO DO: display most commonly used start station
     print('the most common start station is ' , df['Start Station'].mode()[0])
 
-
-    # TO DO: display most commonly used end station
     print('the most common end station is ' , df['End Station'].mode()[0])
 
-    # TO DO: display most frequent combination of start station and end station trip
     df['combination'] = df['Start Station'] + " " + df['End Station']
     print('the most common frequent combination of the trip is ' , df['combination'].mode()[0])
 
@@ -142,13 +132,9 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-    # TO DO: display total travel time
     print('the total travel time is ' , df['Trip Duration'].sum())
 
-
-    # TO DO: display mean travel time
     print('the mean travel time is ' , df['Trip Duration'].mean())
-
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -160,11 +146,9 @@ def user_stats(df):
     print('\nCalculating User Stats...\n')
     start_time = time.time()
 
-    # TO DO: Display counts of user types
     user_types = df.groupby(['User Type'])['User Type'].count()
     print('count of each user types ' , user_types)
 
-    # TO DO: Display counts of gender
 
     try:
         gender_count = df['Gender'].value_counts()
@@ -172,7 +156,7 @@ def user_stats(df):
     except KeyError:
         print('No data available')
 
-    # Display earliest, most recent, and most common year of birth
+
     try:
         old_year = int(df['Birth Year'].min())
         print('earliest year is', old_year)
@@ -190,8 +174,6 @@ def user_stats(df):
         print('Most common year is', common_birth)
     except KeyError:
         print('No data available.')
-
-
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
