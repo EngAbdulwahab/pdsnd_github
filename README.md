@@ -30,3 +30,15 @@ Atom
 
 ### terminal shell
 git bash
+
+**version 3.0**
+*Contact Information*
+
+### name
+Abdulwahab Ali Alamri
+
+### E-mail
+Eng.abdulwahab.alamri@gmail.com
+
+### linkedIn
+https://www.linkedin.com/in/abdulwahab-alamri
