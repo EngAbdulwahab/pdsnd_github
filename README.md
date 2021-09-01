@@ -1,5 +1,9 @@
 >**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
 
+
+**version 1.0**
+*Project Information*
+
 ### Date created
 This project is completed at august 9
 
@@ -14,3 +18,15 @@ data from the internet provided by Udacity as open source for the developers.
 
 ### Credits
 None.
+
+**version 2.0**
+*Technical Information*
+
+### program language
+Python
+
+### text editor
+Atom
+
+### terminal shell
+git bash
